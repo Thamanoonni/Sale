@@ -6,10 +6,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Sale Dashboard</title>
 <meta name="theme-color" content="#0d6efd">
+<style>
+    /* 1. ลบขอบขาวของหน้าเว็บออกให้หมด */
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* ป้องกัน Scrollbar ซ้อน */
+    }
+    
+    /* 2. สั่งให้ Iframe ยืดเต็มจอ และลบเส้นขอบ */
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none; /* ลบเส้นกรอบ */
+    }
+</style>
 </head>
 <body>
     <iframe src="https://script.google.com/macros/s/AKfycbxxwODQqBX9IynrR_LR-s4EhBGd2R6jPHgPhemKuJxzjOWnmDeVnq_IonnybwIp6yM/exec"> 
     </iframe>
 </body>
-
 </html>
