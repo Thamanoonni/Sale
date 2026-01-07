@@ -3,26 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <base target="_top">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Sale Dashboard</title>
 <meta name="theme-color" content="#0d6efd">
 <style>
-    /* 1. ลบขอบขาวของหน้าเว็บออกให้หมด */
+    /* Reset ค่าพื้นฐานทุกอย่าง */
+    * {
+        box-sizing: border-box;
+    }
+
     body, html {
         margin: 0;
         padding: 0;
-        height: 100%;
-        overflow: hidden; /* ป้องกัน Scrollbar ซ้อน */
-    }
-    
-    /* 2. สั่งให้ Iframe ยืดเต็มจอ และลบเส้นขอบ */
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 100%;
-        border: none; /* ลบเส้นกรอบ */
+        overflow: hidden; /* ห้ามให้หน้าหลักมี Scrollbar */
+        background-color: #f4f6f8; /* สีพื้นหลังเดียวกับ Dashboard ให้ดูเนียน */
+    }
+    
+    /* บังคับ Iframe ให้ยึดติดขอบจอทั้ง 4 ด้าน */
+    iframe {
+        position: fixed; /* ใช้ fixed เพื่อให้ติดหน้าจอเสมอ */
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100vw; /* 100% ของความกว้างหน้าจอ */
+        height: 100vh; /* 100% ของความสูงหน้าจอ */
+        border: none;
+        display: block; /* แก้บั๊กขอบขาวด้านล่างในบาง browser */
+        z-index: 9999;
     }
 </style>
 </head>
